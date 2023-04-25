@@ -13,42 +13,57 @@ main {
     #landing{
         position: relative;
         z-index: 1;
-        padding-top: 150/20em;
+        padding-top: 190/20em;
         font-size: 14px;
         //To add overlay in a section
         &:before {
             content: '';
             position: absolute;
             display: block;
-            height: 560/20em;
+            height: 1060/20em;
             width: 100%;
             background: #ECE5DF;
             opacity:1;
-            top: 0;
+            bottom: 110/20em;
             left: 0;
             z-index: -1;
         }
         h1{
-            // font-size: ~"min(10.4vw, 3.6em)";
-            font-size: 45/20em;
+            font-size: ~"min(10vw, 3.6em)";
+            //font-size: 45/20em;
             margin-bottom: 58/45em;
-            max-width: 400/45em;
         }
         h2{
-            font-size: 24/20em;
+            font-size: 24/24em;
             line-height: 1.52em;
             letter-spacing: .05em;
             font-family: 'Raleway', Arial, sans-serif;
             font-weight: 400;
             margin-bottom: 104/24em;
-            max-width: 400/24em;
+            width: 65%;
+            max-width: 672/24em;
         }
 
         .landing-image {
             display: none;
         }
         picture {
-            display: none;
+            font-size: 1vw;
+            position: absolute;
+            display: block;
+            width: 600/20em;
+            height: 1797/20em;
+            bottom: -70/20em;
+            right: 0/20em;
+            z-index: -1;
+            img {
+                position: absolute;
+                top:0;
+                left:0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
         }
          
     }
