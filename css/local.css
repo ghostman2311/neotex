@@ -9,40 +9,56 @@ main {
   #landing {
     position: relative;
     z-index: 1;
-    padding-top: 7.5em;
+    padding-top: 9.5em;
     font-size: 14px;
   }
   #landing:before {
     content: '';
     position: absolute;
     display: block;
-    height: 28em;
+    height: 53em;
     width: 100%;
     background: #ECE5DF;
     opacity: 1;
-    top: 0;
+    bottom: 5.5em;
     left: 0;
     z-index: -1;
   }
   #landing h1 {
-    font-size: 2.25em;
+    font-size: min(10vw, 3.6em);
     margin-bottom: 1.28888889em;
-    max-width: 8.88888889em;
   }
   #landing h2 {
-    font-size: 1.2em;
+    font-size: 1em;
     line-height: 1.52em;
     letter-spacing: .05em;
     font-family: 'Raleway', Arial, sans-serif;
     font-weight: 400;
     margin-bottom: 4.33333333em;
-    max-width: 16.66666667em;
+    width: 65%;
+    max-width: 28em;
   }
   #landing .landing-image {
     display: none;
   }
   #landing picture {
-    display: none;
+    font-size: 1vw;
+    position: absolute;
+    display: block;
+    width: 30em;
+    height: 89.85em;
+    bottom: -3.5em;
+    right: 0em;
+    z-index: -1;
+  }
+  #landing picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 /* Tablet */
