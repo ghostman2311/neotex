@@ -53,7 +53,7 @@ main {
             display: block;
             width: 600/20em;
             height: 1797/20em;
-            bottom: -70/20em;
+            bottom: 70/20em;
             right: 0/20em;
             z-index: -1;
             img {
@@ -70,52 +70,103 @@ main {
     
 }
 
+@media only screen and (min-width: 579px){
+    font-size: 14px;
+}
+
 /* Tablet */
 @media only screen and (min-width: 48em) {
-
-    #hero {
-        padding: 123/20em 0 229/20em 0;
-        z-index: 1;
-        overflow: hidden;
-        background: url("/images/landing.jpg");
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-
-        .hero-content {
-            display: flex;
-            justify-content: space-between;
-            position: relative;
-        }
-
-        .business-casual {
-            display: block;
-            width: 350/20em;
-            position: absolute;
-            right: 0;
-            top: -70/20em;
-        }
+    #landing{
+        font-size: inherit;
     }
 }
 
 /* Small Desktop */
 @media only screen and (min-width: 64em) {
 
-    #hero {
-        padding-top: 300/20em;
-        padding-bottom: 280/20em;
-        background-attachment: fixed;
-
-        .business-casual {
-            right: 50/20em;
-        }
+   #landing{
+    padding-top: 283/20em;
+    &:before {
+        height: 666/20em;
+        bottom: auto;
+        top:0;
     }
+
+    .container {
+        max-width: 1414/20em;
+        padding: 0;
+    }
+    h1 {
+        font-size: 72/20em;
+        max-width: 1057/72em;
+        margin-bottom: 58/72em;
+    }
+
+    h2 {
+        font-size: 24/20em;
+        width: 60%;
+        max-width: 742/24em;
+    }
+
+    picture {
+        font-size: inherit;
+        width: 400/20em;
+        height: 660/20em;
+        bottom: auto;
+        top: 165/20em;
+    }
+   }
 }
 
 /* Large Desktop */
 @media only screen and (min-width: 1300px) {
 
+    #landing{
+        .container {
+            position: relative;
+        }
+        h2 {
+            width: 45%;
+        }
+        picture{
+            right:0;
+            width: 520/20em;
+            top:-118/20em;
+        }
+    }
 }
+
+@media only screen and (min-width: 1400px) {
+
+    #landing{
+        &::before{
+            height: 650/20em;
+        }
+        h2 {
+            width: 55%;
+            margin-bottom: 120/24em;
+            max-width:672/24em;
+            letter-spacing: .005em;
+        }
+       
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+
+    #landing{
+        .landing-image {
+            display: block;
+            position: absolute;
+            top:300/20em;
+            left: 800/20em;
+            width:163/20em;
+            height: 163/20em;
+        }
+       
+    }
+}
+
 
 /*-- -------------------------- -->
 <---          Services          -->

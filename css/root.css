@@ -84,7 +84,6 @@
   }
   body,
   html {
-    background: #f9f8f4;
     margin: 0;
     padding: 0;
     overflow-x: hidden !important;
@@ -502,7 +501,7 @@
   .navbar-menu {
     width: 96%;
     min-height: 5em;
-    height: 7.65em;
+    height: 5em;
     margin: auto;
     position: fixed;
     display: -webkit-box;
@@ -513,6 +512,7 @@
     align-items: center;
     z-index: 10000;
     left: 0;
+    top: 1em;
     background: transparent;
     overflow: visible;
     -webkit-box-sizing: border-box;
@@ -523,7 +523,7 @@
     margin: 0 !important;
     position: absolute;
     left: 0px;
-    height: 6em;
+    height: 2.85em;
     width: 9em;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -549,12 +549,9 @@
     top: 0;
     width: 100%;
     height: 7.4em;
-    background: #fff;
     position: fixed;
     z-index: 1000;
     left: 0;
-    -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
   #on-top {
     margin-right: 2.5em;
