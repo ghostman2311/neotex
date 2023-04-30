@@ -462,6 +462,8 @@
   .side-nav .button-solid {
     width: auto;
     padding: 0 1.11111111em;
+    line-height: 2.61111111em;
+    color: #fff;
   }
   #active-menu {
     border-right: 0.2em solid var(--primary);
@@ -572,14 +574,8 @@
     position: relative;
     font-size: 20px;
   }
-  body:before {
-    content: '';
-    top: 0;
-    width: 100%;
-    height: 7.4em;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
+  body.scroll::before {
+    height: 5em;
   }
   #on-top {
     margin-right: 2.5em;
@@ -642,53 +638,31 @@
     position: relative;
     font-weight: bold;
   }
-  .side-nav a:before {
-    cursor: pointer;
-    -webkit-transition: .2s ease;
-    transition: .2s ease;
+  .side-nav a::before {
     content: '';
-    background: var(--primary);
-    height: 2.22222222em;
-    width: 100%;
     position: absolute;
-    left: 0;
-    top: 50%;
-    -webkit-transform: translateY(-50%) scaleX(0);
-            transform: translateY(-50%) scaleX(0);
-    z-index: -1;
-    opacity: 0;
-    -webkit-transition: opacity .3s, -webkit-transform .3s;
-    transition: opacity .3s, -webkit-transform .3s;
-    transition: opacity .3s, transform .3s;
-    transition: opacity .3s, transform .3s, -webkit-transform .3s;
+    display: block;
+    height: 3.05555556em;
+    width: 3.05555556em;
+    background: url('../images/needle.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1;
+    top: 0em;
+    left: 50%;
+    -webkit-transform: translate(-50%) rotate(90deg);
+            transform: translate(-50%) rotate(90deg);
+  }
+  .side-nav .contact-button {
+    position: absolute;
+    right: 2.77777778em;
   }
   .side-nav a#active-menu {
     position: relative;
     border: none;
-    color: #fff;
     padding-top: 0;
     padding-bottom: 0;
     font-weight: bold;
-  }
-  .side-nav a#active-menu:before {
-    cursor: pointer;
-    -webkit-transition: .2s ease;
-    transition: .2s ease;
-    content: '';
-    background: var(--primary);
-    height: 2.22222222em;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    z-index: -1;
-    opacity: 1;
-    -webkit-transition: opacity .3s, -webkit-transform .3s;
-    transition: opacity .3s, -webkit-transform .3s;
-    transition: opacity .3s, transform .3s;
-    transition: opacity .3s, transform .3s, -webkit-transform .3s;
   }
 }
 /* Regular Desktop */
