@@ -488,7 +488,7 @@ src: url('/fonts/inter-v12-latin-700.woff2') format('woff2'), /* Chrome 36+, Ope
             margin: 0;
             text-align: right;
             list-style: none;
-            margin-top: 50/20em;
+            // margin-top: 50/20em;
             transform: translateX(10/20em);
 
             li {
@@ -621,6 +621,7 @@ src: url('/fonts/inter-v12-latin-700.woff2') format('woff2'), /* Chrome 36+, Ope
 		-webkit-box-sizing: border-box;
 		        box-sizing: border-box;
 		max-width: 1414/20em;
+		transition: top .3s;
 
         .nav-logo {
             margin: 0 !important;
@@ -653,8 +654,14 @@ src: url('/fonts/inter-v12-latin-700.woff2') format('woff2'), /* Chrome 36+, Ope
 
 		&.scroll {
 			&::before{
-				height: 100/20em;
+				height: 140/20em;
 			}
+			
+
+		.navbar-menu {
+			top: 0;
+		}
+
 		}
 	}
 
@@ -691,7 +698,7 @@ src: url('/fonts/inter-v12-latin-700.woff2') format('woff2'), /* Chrome 36+, Ope
 		pointer-events: initial;
 
         ul {
-            margin-top: 90/20em;
+            // margin-top: 90/20em;
             transform: translateX(0);
 
             li {
