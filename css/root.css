@@ -619,14 +619,36 @@
     color: #fff;
     font-size: 0.9em;
   }
+  .side-nav ul li a.link {
+    position: relative;
+  }
+  .side-nav ul li a.link::before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 3.05555556em;
+    width: 3.05555556em;
+    background: url('../images/needle.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0;
+    top: 0em;
+    left: 50%;
+    -webkit-transform: translateX(0%) rotate(90deg);
+            transform: translateX(0%) rotate(90deg);
+    -webkit-transition: -webkit-transform .3s opacity .3s;
+    transition: -webkit-transform .3s opacity .3s;
+    transition: transform .3s opacity .3s;
+    transition: transform .3s opacity .3s, -webkit-transform .3s opacity .3s;
+  }
   .side-nav ul li:hover a.link {
     color: #fff;
+    position: relative;
   }
-  .side-nav ul li:hover a.link:before {
-    width: 100%;
+  .side-nav ul li:hover a.link::before {
     opacity: 1;
-    -webkit-transform: translateY(-50%) scaleX(1);
-            transform: translateY(-50%) scaleX(1);
+    -webkit-transform: translateX(-50%) rotate(90deg);
+            transform: translateX(-50%) rotate(90deg);
   }
   .side-nav a {
     padding: 0 1.38888889em;
@@ -638,7 +660,20 @@
     position: relative;
     font-weight: bold;
   }
-  .side-nav a::before {
+  .side-nav .contact-button {
+    position: absolute;
+    right: 2.77777778em;
+  }
+  .side-nav a#active-menu,
+  .side-nav:hover {
+    position: relative;
+    border: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-weight: bold;
+  }
+  .side-nav a#active-menu::before,
+  .side-nav:hover::before {
     content: '';
     position: absolute;
     display: block;
@@ -650,19 +685,12 @@
     opacity: 1;
     top: 0em;
     left: 50%;
-    -webkit-transform: translate(-50%) rotate(90deg);
-            transform: translate(-50%) rotate(90deg);
-  }
-  .side-nav .contact-button {
-    position: absolute;
-    right: 2.77777778em;
-  }
-  .side-nav a#active-menu {
-    position: relative;
-    border: none;
-    padding-top: 0;
-    padding-bottom: 0;
-    font-weight: bold;
+    -webkit-transform: translateX(-50%) rotate(90deg);
+            transform: translateX(-50%) rotate(90deg);
+    -webkit-transition: -webkit-transform .3s opacity .3s;
+    transition: -webkit-transform .3s opacity .3s;
+    transition: transform .3s opacity .3s;
+    transition: transform .3s opacity .3s, -webkit-transform .3s opacity .3s;
   }
 }
 /* Regular Desktop */

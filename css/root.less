@@ -700,14 +700,34 @@ src: url('/fonts/inter-v12-latin-700.woff2') format('woff2'), /* Chrome 36+, Ope
                 color: #fff;
                 font-size: 18/20em;
 
+				a.link {
+					position: relative;
+					&::before{
+						content: '';
+						position: absolute;
+						display: block;
+						height: 55/18em;
+						width: 55/18em;
+						background: url('../images/needle.png');
+						background-size: cover;
+						background-repeat: no-repeat;
+						opacity: 0;
+						top: 0/18em;
+						left: 50%;
+						transform: translateX(00%) rotate(90deg);
+						transition: transform .3s opacity .3s;
+					}
+				}
+
                 &:hover {
                     a.link {
                         color: #fff;
-                        &:before {
-                            width: 100%;
-                            opacity: 1;
-                            transform: translateY(-50%) scaleX(1);
-                        }
+						position: relative;
+
+						&::before{
+							opacity: 1;
+							transform: translateX(-50%) rotate(90deg);
+						}
                     }
                 }
             }
@@ -724,6 +744,21 @@ src: url('/fonts/inter-v12-latin-700.woff2') format('woff2'), /* Chrome 36+, Ope
             position: relative;
             font-weight: bold;
 
+			
+			
+        }
+
+		.contact-button {
+			position: absolute;
+			right: 50/18em ;
+		}
+
+        a#active-menu, &:hover {
+            position: relative;
+            border: none;
+            padding-top: 0;
+            padding-bottom: 0;
+            font-weight: bold;
 			&::before{
 				content: '';
 				position: absolute;
@@ -736,22 +771,11 @@ src: url('/fonts/inter-v12-latin-700.woff2') format('woff2'), /* Chrome 36+, Ope
 				opacity: 1;
 				top: 0/18em;
 				left: 50%;
-				transform: translate(-50%) rotate(90deg);
+				transform: translateX(-50%) rotate(90deg);
+				transition: transform .3s opacity .3s;
 			}
-			
-        }
 
-		.contact-button {
-			position: absolute;
-			right: 50/18em ;
-		}
 
-        a#active-menu {
-            position: relative;
-            border: none;
-            padding-top: 0;
-            padding-bottom: 0;
-            font-weight: bold;
         }
 
 		
